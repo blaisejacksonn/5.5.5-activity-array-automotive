@@ -11,6 +11,35 @@ class car extends VehicleModule {
         this.fuel = 10
         this.scheduleService = false
     }
+
+    start(){
+        if (this.fuel > 0){
+            return this.started = true
+            console.log('engine started...!')
+        }
+        else {
+            return this.started = false
+            console.log('you have no fuel')
+        }
+    }
+}
+loadPassenger(){
+    if (this.passenger < this.maximumPassengers){
+        if ((num + this.passenger) <= this.maximumPassengers){
+            this.passenger = num
+            return this.passenger
+        } 
+        else {
+            console.log(this.model + '' + this.make + 'not enough seats')
+        }
+    }
+}
+checkService(){
+    if (this.mileage > 3000) {
+        this.scheduleService = true
+        return this.scheduleService
+        console.log ('need to schedule appointment')
+    }
 }
 
 
